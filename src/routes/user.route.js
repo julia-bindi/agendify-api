@@ -12,6 +12,8 @@ const corsoptions = {
 
 router.options("/signup", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
 router.post("/signup", cors(corsoptions), UserController.signup)
+router.options("/login", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
+router.post("/login", cors(corsoptions), UserController.login)
 
 
 module.exports.user = router;
