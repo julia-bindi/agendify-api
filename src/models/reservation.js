@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Reseration.init({
+  Reservation.init({
     company: DataTypes.INTEGER,
     service: DataTypes.INTEGER,
     start: DataTypes.DATE,

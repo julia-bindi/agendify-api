@@ -1,3 +1,5 @@
+const { encryptor } = require("../helpers");
+
 'use strict';
 const {
   Model
