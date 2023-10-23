@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     })
   }
 
-  Service.associate = function(mode) {
+  Service.associate = function(model) {
     Service.hasMany(model.Reservation, {
       foreignKey: "service"
     })
