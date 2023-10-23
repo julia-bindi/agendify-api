@@ -21,8 +21,8 @@ module.exports = {
                 stripUnknown: true,
               });
 
-            const { nome, email, password, photo, phone, type, description, openHours, category } = req.body;
-            const response = await UserService.signup(nome, email, password, photo, phone, type, description, openHours, category);
+            const { name, email, password, photo, phone, type, description, openHours, category } = req.body;
+            const response = await UserService.signup(name, email, password, photo, phone, type, description, openHours, category);
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);
