@@ -1,11 +1,11 @@
-const clientesRepository = require("./cliente.repository");
-const enderecoRepository = require("./endereco.repository")
-const produtosRepository = require("./produtos.repository")
-const pedidosRepository = require("./pedidos.repository")
+const usersRepository = require("./user.repository");
+const companyRepository = require("./company.repository")
+const serviceRepository = require("./service.repository")
+const reservationRepository = require("./reservation.repository")
 
 module.exports = {
-  clientesRepository,
-  enderecoRepository,
-  produtosRepository,
-  pedidosRepository,
+  usersRepository,
+  companyRepository,
+  serviceRepository,
+  reservationRepository,
 };
