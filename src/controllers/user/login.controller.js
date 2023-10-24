@@ -3,26 +3,19 @@ const { UserService } = require("../../services");
 const yup = require("yup");
 
 module.exports = {
-    signup: async (req, res) =>{
+    login: async (req,res) =>{
         try{
             const schema = yup.object().shape({
-                name: yup.string().required(),
                 email: yup.string().required(),
                 password: yup.string().required(),
-                photo: yup.string(),
-                phone: yup.string().required(),
-                type: yup.string().required(),
-                description: yup.string(),
-                openHours: yup.string(),
-                category: yup.string(),
             });
 
             await schema.validate(req.body, {
                 stripUnknown: true,
               });
 
-            const { name, email, password, photo, phone, type, description, openHours, category } = req.body;
-            const response = await UserService.signup(name, email, password, photo, phone, type, description, openHours, category);
+            const { email, password } = req.body;
+            const response = await UserService.login(email, password);
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);
@@ -34,5 +27,5 @@ module.exports = {
               )
               .json(error.message);
           }
-    },
+    }
 }

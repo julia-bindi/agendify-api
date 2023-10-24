@@ -6,7 +6,7 @@ module.exports = {
       {
         name: "Company Test",
         email: "company@test.com",
-        password: "test",
+        password: "$2a$08$EePAvS3RM2mR.vFVpjqyOeH6A.Ptzi7YyxEFTkpHA3aOsKeelBq/S",
         Photo: "",
         phone: "1198888-7777",
         type: "COMPANY",
