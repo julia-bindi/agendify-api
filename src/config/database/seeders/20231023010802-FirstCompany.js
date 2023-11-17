@@ -6,6 +6,7 @@ module.exports = {
     {
       user: 1,
       description: "Company to test the api",
+      workDays: ["seg", "terça", "quarta"],
       openHours: "8h - 18h",
       category: "Test",
       createdAt: new Date(),
