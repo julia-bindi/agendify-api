@@ -21,13 +21,14 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      Photo: {
+      imageName: {
         type: Sequelize.STRING,
-        validate:{
-          isUrl:{
-            msg: "Precisa ser uma url"
-          }
-        }
+      },
+      imageType: {
+        type: Sequelize.STRING,
+      },
+      imageData: {
+        type: Sequelize.BLOB,
       },
       phone: {
         type: Sequelize.STRING,

@@ -19,6 +19,9 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
+      workDays: {
+        type: Sequelize.ARRAY(Sequelize.STRING)
+      },
       openHours: {
         type: Sequelize.STRING
       },

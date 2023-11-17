@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Company.init({
     user: DataTypes.INTEGER,
     description: DataTypes.STRING,
+    workDays: DataTypes.ARRAY(DataTypes.STRING),
     openHours: DataTypes.STRING,
     category: DataTypes.STRING
   }, {
