@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Reservation.init({
     company: DataTypes.INTEGER,
+    user: DataTypes.INTEGER,
     service: DataTypes.INTEGER,
     start: DataTypes.DATE,
     date: DataTypes.DATE,
@@ -27,6 +28,13 @@ module.exports = (sequelize, DataTypes) => {
   Reservation.associate = function(model) {
     Reservation.belongsTo(model.Company, {
       foreignKey: "company",
+      onDelete: "CASCADE"
+    })
+  }
+
+  Reservation.associate = function(model) {
+    Reservation.belongsTo(model.User, {
+      foreignKey: "user",
       onDelete: "CASCADE"
     })
   }
