@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     workDays: DataTypes.ARRAY(DataTypes.STRING),
     openHours: DataTypes.STRING,
+    street: DataTypes.STRING,
+    homeNumber: DataTypes.INTEGER,
+    neighborhood: DataTypes.STRING,
+    state: DataTypes.STRING,
     category: DataTypes.STRING
   }, {
     sequelize,

@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Julia computadores\",\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"imageName\": \"teste.png\",\r\n    \"imageType\": \"image/png\",\r\n    \"imageData\": \"\",\r\n    \"phone\": \"11 9999-88888\",\r\n    \"type\": \"COMPANY\",\r\n    \"password\": \"computador\",\r\n    \"description\": \"Conserto de computadores\",\r\n    \"workdays\": [\"seg\", \"terça\"],\r\n    \"openHours\": \"8h - 18h\",\r\n    \"category\": \"tech\"\r\n\r\n}",
+							"raw": "{\r\n    \"name\" : \"Julia computadores\",\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"imageName\": \"teste.png\",\r\n    \"imageType\": \"image/png\",\r\n    \"imageData\": \"\",\r\n    \"phone\": \"11 9999-88888\",\r\n    \"type\": \"COMPANY\",\r\n    \"password\": \"computador\",\r\n    \"description\": \"Conserto de computadores\",\r\n    \"workdays\": [\"seg\", \"terça\"],\r\n    \"openHours\": \"08:00 às 18:00\",\r\n    \"street\": \"Rua da imaginação\",\r\n    \"homeNumber\": 0,\r\n    \"neighborhood\": \"Criatividade\",\r\n    \"state\": \"Loucura\",\r\n    \"category\": \"tech\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

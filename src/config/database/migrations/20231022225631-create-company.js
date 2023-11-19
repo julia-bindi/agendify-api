@@ -28,6 +28,18 @@ module.exports = {
       category: {
         type: Sequelize.STRING
       },
+      street: {
+        type: Sequelize.STRING
+      },
+      homeNumber: {
+        type: Sequelize.INTEGER
+      },
+      neighborhood: {
+        type: Sequelize.STRING
+      },
+      state: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
