@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Julia computadores\",\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"imageName\": \"teste.png\",\r\n    \"imageType\": \"image/png\",\r\n    \"imageData\": \"\",\r\n    \"phone\": \"11 9999-88888\",\r\n    \"type\": \"COMPANY\",\r\n    \"password\": \"computador\",\r\n    \"description\": \"Conserto de computadores\",\r\n    \"workdays\": [\"seg\", \"terça\"],\r\n    \"openHours\": \"8h - 18h\",\r\n    \"category\": \"tech\"\r\n\r\n}",
+							"raw": "{\r\n    \"name\" : \"Julia computadores\",\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"imageName\": \"teste.png\",\r\n    \"imageType\": \"image/png\",\r\n    \"imageData\": \"\",\r\n    \"phone\": \"11 9999-88888\",\r\n    \"type\": \"COMPANY\",\r\n    \"password\": \"computador\",\r\n    \"description\": \"Conserto de computadores\",\r\n    \"workdays\": [\"seg\", \"terça\"],\r\n    \"openHours\": \"08:00 às 18:00\",\r\n    \"street\": \"Rua da imaginação\",\r\n    \"homeNumber\": 0,\r\n    \"neighborhood\": \"Criatividade\",\r\n    \"state\": \"Loucura\",\r\n    \"category\": \"tech\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -174,6 +174,52 @@
 							"body": null
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqdWxpYUBjb21wdXRhZG9yZXMuY29tIiwidHlwZSI6IkNPTVBBTlkiLCJpYXQiOjE3MDA0MjgxMjl9.ypMt2pYqXN6wI-Skkgp5k_plXaA1M-azSH0zrXnWo2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"First Service\",\r\n    \"cost\": 2.99,\r\n    \"duration\": 30,\r\n    \"description\": \"First time a serivce is created in agendify\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/service/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"service",
+								"create"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},

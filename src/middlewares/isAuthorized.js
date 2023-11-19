@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 const { constants } = require("../utils");
 const { messages } = require("../helpers");
-const { clientesRepository } = require("../repositories");
+const { usersRepository } = require("../repositories");
 
 module.exports = async (req, res, next) => {
   try {
@@ -29,17 +29,17 @@ module.exports = async (req, res, next) => {
 
     const verify = promisify(jwt.verify);
     const decoded = await verify(token, constants.jwtToken);
-    const cliente = await clientesRepository.getById(decoded.id);
+    const user = await usersRepository.getById(decoded.id);
 
-    if (!cliente) {
+    if (!user) {
       throw {
         status: StatusCodes.NOT_FOUND,
-        message: messages.notFound("cliente"),
+        message: messages.notFound("user"),
       };
     }
 
     req.session = { token, id: decoded.id, email: decoded.email };
-    req.cliente = cliente;
+    req.user = user;
 
     return next();
   } catch (error) {
