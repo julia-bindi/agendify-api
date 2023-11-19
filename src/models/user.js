@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "user"
     })
   }
-
+  
   User.beforeSave(async (user, options) => {
     const password = await encryptor.hashPassword(user.password);
     if (user.changed("password")) {
