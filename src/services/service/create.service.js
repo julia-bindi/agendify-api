@@ -15,7 +15,7 @@ module.exports.create = async(token, name, cost, duration, description) => {
             messages: messages.doNotHavePermission("companies")
         }
     }
-
+  
     const company = await companyRepository.get({ user: payload.id})
 
     console.log(payload.id)
