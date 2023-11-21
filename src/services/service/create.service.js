@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 
 const { encryptor, messages } = require("../../helpers");
 const { constants } = require("../../utils");
-const { serviceRepository } = require("../../repositories");
+const { usersRepository, companyRepository, serviceRepository, reservationRepository } = require("../../repositories");
 const { promisify } = require("util");
 
 module.exports.create = async(token, name, cost, duration, description) => {
@@ -15,13 +15,16 @@ module.exports.create = async(token, name, cost, duration, description) => {
             messages: messages.doNotHavePermission("companies")
         }
     }
+  
+    const company = await companyRepository.get({ user: payload.id})
+
     console.log(payload.id)
     const service = {
         name,
         cost,
         duration,
         description,
-        company: payload.id,
+        company: company.id,
         createdAt: new Date(),
         updatedAt: new Date(),
     }
