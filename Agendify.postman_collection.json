@@ -341,6 +341,48 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "check",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqdWxpYUB0ZXN0LmNvbSIsInR5cGUiOiJDTElFTlQiLCJpYXQiOjE3MDA5MTYyNzJ9.CjeWpIfvBoXw2QKDUprrWYVGq8jlZWyUd1ATz6bxydY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/reservation/check?id=1&date=20/12/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"check"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "20/12/23"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
