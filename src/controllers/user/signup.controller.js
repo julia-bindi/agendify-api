@@ -21,6 +21,7 @@ module.exports = {
                 street: yup.string(),
                 homeNumber: yup.number(),
                 neighborhood: yup.string(),
+                city: yup.string(),
                 state: yup.string(),
                 category: yup.string(),
             });
