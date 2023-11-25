@@ -23,7 +23,7 @@ module.exports = {
                 neighborhood: yup.string(),
                 city: yup.string(),
                 state: yup.string(),
-                category: yup.string(),
+                category: yup.array(),
             });
 
             await schema.validate(req.body, {
