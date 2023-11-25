@@ -29,7 +29,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       category: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       street: {
         type: Sequelize.STRING

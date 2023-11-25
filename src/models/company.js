@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     neighborhood: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
-    category: DataTypes.STRING
+    category: DataTypes.ARRAY(DataTypes.STRING),
   }, {
     sequelize,
     modelName: 'Company',
