@@ -315,7 +315,7 @@
 							"body": null
 						},
 						{
-							"name": "login",
+							"name": "agendify 3",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -341,6 +341,65 @@
 										"v1",
 										"user",
 										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "my services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqdWxpYUBjb21wdXRhZG9yZXMuY29tIiwidHlwZSI6IkNPTVBBTlkiLCJpYXQiOjE3MDA1NjQzODZ9.Lvvg81kR5UOJsnpoffpJv6t4pm9EF-cvu3rKKYxuzyE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "agendify",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/user/services",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"services"
 									]
 								}
 							},
