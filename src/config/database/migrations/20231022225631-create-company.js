@@ -22,7 +22,10 @@ module.exports = {
       workDays: {
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
-      openHours: {
+      startTime: {
+        type: Sequelize.STRING
+      },
+      endTime: {
         type: Sequelize.STRING
       },
       category: {

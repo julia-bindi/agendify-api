@@ -6,7 +6,7 @@ const { constants } = require("../../utils");
 const { usersRepository, companyRepository } = require("../../repositories");
 const { promisify } = require("util");
 
-module.exports.signup = async (name, email, password, imageName, imageType, imageData, phone, type, description, workDays, openHours, category) => {
+module.exports.signup = async (name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, state, category) => {
     const user = await usersRepository.get({ email })
 
     if(user) {
@@ -38,7 +38,12 @@ module.exports.signup = async (name, email, password, imageName, imageType, imag
             user: userGot.id,
             description,
             workDays,
-            openHours,
+            startTime,
+            endTime,
+            street,
+            homeNumber,
+            neighborhood,
+            state,
             category,
             createdAt: new Date(),
             updatedAt: new Date(),
