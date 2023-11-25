@@ -16,9 +16,8 @@ module.exports.check = async(serviceId, date) => {
     let s = start[0] * 60 + start[1] * 1
     const e = end[0] * 60 + end[1] * 1
 
-    const hours = [company.startTime]
+    const hours = []
     while(s < e){
-        s = Number(s) + Number(duration)
         let time = Math.floor(s/60).toLocaleString('en-US', {
                 minimumIntegerDigits: 2,
                 useGrouping: false
@@ -29,6 +28,7 @@ module.exports.check = async(serviceId, date) => {
                 useGrouping: false
             }).toString()
         hours.push(time)
+        s = Number(s) + Number(duration)
     }
 
     if(reservations.count != 0){
