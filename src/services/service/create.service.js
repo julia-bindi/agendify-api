@@ -18,7 +18,6 @@ module.exports.create = async(token, name, cost, duration, description) => {
   
     const company = await companyRepository.get({ user: payload.id})
 
-    console.log(payload.id)
     const service = {
         name,
         cost,

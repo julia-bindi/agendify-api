@@ -15,8 +15,13 @@ module.exports = {
                 phone: yup.string().required(),
                 type: yup.string().required(),
                 description: yup.string(),
-                workDays: yup.string(),
-                openHours: yup.string(),
+                workDays: yup.array(),
+                startTime: yup.string(),
+                endTime: yup.string(),
+                street: yup.string(),
+                homeNumber: yup.number(),
+                neighborhood: yup.string(),
+                state: yup.string(),
                 category: yup.string(),
             });
 
@@ -24,8 +29,8 @@ module.exports = {
                 stripUnknown: true,
               });
 
-            const { name, email, password, imageName, imageType, imageData, phone, type, description, workDays, openHours, category } = req.body;
-            const response = await UserService.signup(name, email, password, imageName, imageType, imageData, phone, type, description, workDays, openHours, category);
+            const { name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, state, category } = req.body;
+            const response = await UserService.signup(name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, state, category);
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const cors = require("cors");
 const { StatusCodes } = require("http-status-codes");
-const { ServiceController } = require("../controllers");
+const { ReservationController } = require("../controllers");
 const { isAuthorized } = require("../middlewares")
 
 const corsoptions = {
@@ -12,8 +12,8 @@ const corsoptions = {
   }
 
 router.options("/create", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
-router.post("/create", cors(corsoptions), ServiceController.create)
-router.options("/delete", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
-router.delete("/delete", cors(corsoptions), ServiceController.destroy)
+router.post("/create", cors(corsoptions), ReservationController.create)
+//router.options("/delete", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
+//router.delete("/delete", cors(corsoptions), ServiceController.destroy)
 
-module.exports.service = router
+module.exports.reservation = router
