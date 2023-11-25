@@ -12,6 +12,7 @@ module.exports = {
       street: "Rua da tentativa",
       homeNumber: 0,
       neighborhood: "Teste",
+      city: "test",
       state: "API",
       category: "Test",
       createdAt: new Date(),
