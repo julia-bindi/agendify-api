@@ -670,6 +670,73 @@
 							"body": null
 						}
 					]
+				},
+				{
+					"name": "cancel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reservationId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/reservation/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"cancel"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "agendify",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reservationId\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/reservation/cancel",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"reservation",
+										"cancel"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
