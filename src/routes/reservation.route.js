@@ -13,6 +13,8 @@ const corsoptions = {
 
 router.options("/create", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
 router.post("/create", cors(corsoptions), ReservationController.create)
+router.options("/check", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
+router.get("/check", cors(corsoptions), ReservationController.check)
 //router.options("/delete", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
 //router.delete("/delete", cors(corsoptions), ServiceController.destroy)
 
