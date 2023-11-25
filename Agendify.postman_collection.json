@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Julia computadores\",\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"imageName\": \"teste.png\",\r\n    \"imageType\": \"image/png\",\r\n    \"imageData\": \"\",\r\n    \"phone\": \"11 9999-88888\",\r\n    \"type\": \"COMPANY\",\r\n    \"password\": \"computador\",\r\n    \"description\": \"Conserto de computadores\",\r\n    \"workDays\": [\"seg\", \"terça\"],\r\n    \"startTime\": \"08:00\",\r\n    \"endTime\": \"18:00\",\r\n    \"street\": \"Rua da imaginação\",\r\n    \"homeNumber\": 0,\r\n    \"neighborhood\": \"Criatividade\",\r\n    \"state\": \"Loucura\",\r\n    \"category\": \"tech\"\r\n\r\n}",
+							"raw": "{\r\n    \"name\" : \"Julia computadores\",\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"imageName\": \"teste.png\",\r\n    \"imageType\": \"image/png\",\r\n    \"imageData\": \"\",\r\n    \"phone\": \"11 9999-88888\",\r\n    \"type\": \"COMPANY\",\r\n    \"password\": \"computador\",\r\n    \"description\": \"Conserto de computadores\",\r\n    \"workDays\": [\"seg\", \"terça\"],\r\n    \"startTime\": \"08:00\",\r\n    \"endTime\": \"18:00\",\r\n    \"street\": \"Rua da imaginação\",\r\n    \"homeNumber\": 0,\r\n    \"neighborhood\": \"Criatividade\",\r\n    \"city\": \"sem ideia\",\r\n    \"state\": \"Loucura\",\r\n    \"category\": \"tech\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -39,6 +39,41 @@
 						}
 					},
 					"response": [
+						{
+							"name": "agendify 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Julia computadores\",\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"imageName\": \"teste.png\",\r\n    \"imageType\": \"image/png\",\r\n    \"imageData\": \"\",\r\n    \"phone\": \"11 9999-88888\",\r\n    \"type\": \"COMPANY\",\r\n    \"password\": \"computador\",\r\n    \"description\": \"Conserto de computadores\",\r\n    \"workDays\": [\"seg\", \"terça\"],\r\n    \"startTime\": \"08:00\",\r\n    \"endTime\": \"18:00\",\r\n    \"street\": \"Rua da imaginação\",\r\n    \"homeNumber\": 0,\r\n    \"neighborhood\": \"Criatividade\",\r\n    \"city\": \"sem ideia\",\r\n    \"state\": \"Loucura\",\r\n    \"category\": \"tech\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/user/signup",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
 						{
 							"name": "signup",
 							"originalRequest": {
@@ -72,6 +107,41 @@
 							"header": null,
 							"cookie": [],
 							"body": null
+						},
+						{
+							"name": "agendify 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Julia\",\r\n    \"email\" : \"julia@test.com\",\r\n    \"phone\": \"11 99999-8888\",\r\n    \"type\": \"CLIENT\",\r\n    \"password\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/user/signup",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
 						}
 					]
 				},
@@ -82,7 +152,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"password\": \"computador\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"company@test.com\",\r\n    \"password\": \"test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -105,6 +175,41 @@
 						}
 					},
 					"response": [
+						{
+							"name": "agendify 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"company@test.com\",\r\n    \"password\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/user/login",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
 						{
 							"name": "login",
 							"originalRequest": {
@@ -140,13 +245,13 @@
 							"body": null
 						},
 						{
-							"name": "login",
+							"name": "agendify 2",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\" : \"company@test.com\",\r\n    \"password\": \"test\"\r\n}",
+									"raw": "{\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"password\": \"computador\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -154,12 +259,13 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/api/v1/user/login",
-									"protocol": "http",
+									"raw": "https://agendify.onrender.com/api/v1/user/login",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"agendify",
+										"onrender",
+										"com"
 									],
-									"port": "3000",
 									"path": [
 										"api",
 										"v1",
@@ -180,7 +286,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\" : \"julia@computadores.com\",\r\n    \"password\": \"computador\"\r\n}",
+									"raw": "{\r\n    \"email\" : \"company@test.com\",\r\n    \"password\": \"test\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -188,12 +294,48 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/api/v1/user/login",
-									"protocol": "http",
+									"raw": "https://agendify.onrender.com/api/v1/user/login",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"agendify",
+										"onrender",
+										"com"
 									],
-									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"company@test.com\",\r\n    \"password\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/user/login",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
 									"path": [
 										"api",
 										"v1",
@@ -253,7 +395,43 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "agedify",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"First Service\",\r\n    \"cost\": 2.99,\r\n    \"duration\": 30,\r\n    \"description\": \"First time a serivce is created in agendify\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/service/create",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"service",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				},
 				{
 					"name": "delete",
@@ -294,7 +472,43 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "agendify",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serviceId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/service/delete",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"service",
+										"delete"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
@@ -340,7 +554,43 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "agendify",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serviceId\": 1,\r\n    \"time\": \"10:00\",\r\n    \"date\": \"20/12/23\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/reservation/create",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"reservation",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				},
 				{
 					"name": "check",
@@ -382,7 +632,44 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "agendify",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/reservation/check?id=1&date=20/12/23",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"reservation",
+										"check"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										},
+										{
+											"key": "date",
+											"value": "20/12/23"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
@@ -406,7 +693,34 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "agendify",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://agendify.onrender.com/api/v1/hello/",
+							"protocol": "https",
+							"host": [
+								"agendify",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"hello",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		}
 	]
 }
