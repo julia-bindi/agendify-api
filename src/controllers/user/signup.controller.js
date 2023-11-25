@@ -15,7 +15,7 @@ module.exports = {
                 phone: yup.string().required(),
                 type: yup.string().required(),
                 description: yup.string(),
-                workDays: yup.string(),
+                workDays: yup.array(),
                 startTime: yup.string(),
                 endTime: yup.string(),
                 street: yup.string(),
