@@ -6,7 +6,7 @@ const { constants } = require("../../utils");
 const { usersRepository, companyRepository } = require("../../repositories");
 const { promisify } = require("util");
 
-module.exports.signup = async (name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, state, category) => {
+module.exports.signup = async (name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, city, state, category) => {
     const user = await usersRepository.get({ email })
 
     if(user) {
@@ -43,6 +43,7 @@ module.exports.signup = async (name, email, password, imageName, imageType, imag
             street,
             homeNumber,
             neighborhood,
+            city,
             state,
             category,
             createdAt: new Date(),
@@ -61,5 +62,5 @@ module.exports.signup = async (name, email, password, imageName, imageType, imag
     const sign = promisify(jwt.sign);
     const token = await sign(payload, constants.jwtToken);
   
-    return { email, type, token };
+    return { name, type, token };
 };
