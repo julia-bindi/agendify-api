@@ -286,7 +286,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\" : \"company@test.com\",\r\n    \"password\": \"test\"\r\n}",
+									"raw": "{\r\n    \"email\" : \"julia@test.com\",\r\n    \"password\": \"test\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -321,7 +321,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\" : \"company@test.com\",\r\n    \"password\": \"test\"\r\n}",
+									"raw": "{\r\n    \"email\" : \"julia@test.com\",\r\n    \"password\": \"test\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -400,6 +400,65 @@
 										"v1",
 										"user",
 										"services"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "reservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqdWxpYUB0ZXN0LmNvbSIsInR5cGUiOiJDTElFTlQiLCJpYXQiOjE3MDA5NTg5NTN9.rLgrVT6U5tBi458kuMqfM_0VaptLfaFyg2klGv1qKM8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/reservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"reservations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "agendify",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/user/reservations",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"reservations"
 									]
 								}
 							},
