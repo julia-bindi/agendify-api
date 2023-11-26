@@ -14,7 +14,7 @@ module.exports = {
       neighborhood: "Teste",
       city: "test",
       state: "API",
-      category: "Test",
+      category: ["Test"],
       createdAt: new Date(),
       updatedAt: new Date()
     }
