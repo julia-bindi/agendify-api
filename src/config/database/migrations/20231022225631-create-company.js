@@ -23,10 +23,10 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
       startTime: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       endTime: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       category: {
         type: Sequelize.ARRAY(Sequelize.STRING)

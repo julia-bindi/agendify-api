@@ -11,10 +11,8 @@ module.exports.check = async(serviceId, date) => {
     const company = await companyRepository.getById(service.company)
 
     const duration = service.duration * 1
-    const start = company.startTime.split(':')
-    const end = company.endTime.split(':')
-    let s = start[0] * 60 + start[1] * 1
-    const e = end[0] * 60 + end[1] * 1
+    let s = company.startTime
+    const e = company.endTime
 
     const hours = []
     while(s < e){
