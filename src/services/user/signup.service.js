@@ -32,14 +32,19 @@ module.exports.signup = async (name, email, password, imageName, imageType, imag
     await usersRepository.create(newUser);
 
     const userGot = await usersRepository.get({ email })
-
+    
     if(type == "COMPANY"){
+        const stime = startTime.split(":")
+        const st = stime[0] * 60 + stime[1] * 1
+        const etime = endTime.split(":")
+        const et = etime[0] * 60 + etime[1] * 1
+        
         const newCompany = {
             user: userGot.id,
             description,
             workDays,
-            startTime,
-            endTime,
+            startTime: st,
+            endTime: et,
             street,
             homeNumber,
             neighborhood,
