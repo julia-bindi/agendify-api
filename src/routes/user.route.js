@@ -16,6 +16,8 @@ router.options("/login", cors(corsoptions), async (req,res) => { return res.stat
 router.post("/login", cors(corsoptions), UserController.login)
 router.options("/services", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
 router.get("/services", cors(corsoptions), UserController.myServices)
+router.options("/reservations", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
+router.get("/reservations", cors(corsoptions), UserController.myReservations)
 
 
 module.exports.user = router;
