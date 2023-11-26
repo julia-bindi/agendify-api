@@ -30,8 +30,8 @@ module.exports = {
                 stripUnknown: true,
               });
 
-            const { name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, state, category } = req.body;
-            const response = await UserService.signup(name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, state, category);
+            const { name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, city, state, category } = req.body;
+            const response = await UserService.signup(name, email, password, imageName, imageType, imageData, phone, type, description, workDays, startTime, endTime, street, homeNumber, neighborhood, city, state, category);
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);
