@@ -627,6 +627,73 @@
 							"body": null
 						}
 					]
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startTime\": \"17:59\",\r\n    \"endTime\": \"19:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/service/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"service",
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "agendify",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"startTime\": \"17:59\",\r\n    \"endTime\": \"19:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://agendify.onrender.com/api/v1/service/search",
+									"protocol": "https",
+									"host": [
+										"agendify",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"service",
+										"search"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
