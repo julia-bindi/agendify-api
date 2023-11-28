@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 
 const { encryptor, messages } = require("../../helpers");
 const { constants } = require("../../utils");
-const { serviceRepository, companyRepository} = require("../../repositories");
+const { serviceRepository, companyRepository, usersRepository} = require("../../repositories");
 
 
 module.exports.search = async(category = [], startTime = "00:00", endTime = "24:00", smallPrice = 0.0, biggestPrice = Number.POSITIVE_INFINITY, state = "", city = "") => {
@@ -23,21 +23,48 @@ module.exports.search = async(category = [], startTime = "00:00", endTime = "24:
             startTime: { [Op.lt]: et },
             endTime: { [Op.gt]: st},
         },
-        attributes: ["id"],
         raw: true,
     })
-    
+
     companies.rows.forEach(id => {
-        ids.push(id.id)
+        ids.push(id.user)
     });
 
-    const services = await serviceRepository.list({
+    const users = await usersRepository.list({
         where:{
-            company: { [Op.in]: ids },
-            cost: { [Op.between]: [smallPrice, biggestPrice] }
+            id: {[Op.in]: ids}
         },
-        raw: true,
+        raw: true
     })
 
-    return services
+    userDict = {}
+    users.rows.forEach(u => {
+        userDict[u.id] = u
+    });
+
+    const response = []
+    companies.rows.forEach(c => {
+        response.push({
+            id: userDict[c.user].id,
+            name: userDict[c.user].name,
+            email: userDict[c.user].email,
+            imageName: userDict[c.user].imageName,
+            imageType: userDict[c.user].imageType,
+            imageData: userDict[c.user].imageData,
+            phone: userDict[c.user].phone,
+            description: c.description,
+            workDays: c.workDays,
+            startTime: c.startTime,
+            endTime: c.endTime,
+            category: c.category,
+            street: c.street,
+            homeNumber: c.homeNumber,
+            neighborhood: c.neighborhood,
+            city: c.city,
+            state: c.state,
+        })
+    });
+
+
+    return response
 }
