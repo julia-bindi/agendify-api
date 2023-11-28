@@ -54,8 +54,20 @@ module.exports.search = async(category = [], startTime = "00:00", endTime = "24:
             phone: userDict[c.user].phone,
             description: c.description,
             workDays: c.workDays,
-            startTime: c.startTime,
-            endTime: c.endTime,
+            startTime: (c.startTime/60).toLocaleString('en-US', {
+                minimumIntegerDigits: 2,
+                useGrouping: false
+              }) + ":" + (c.startTime%60).toLocaleString('en-US', {
+                minimumIntegerDigits: 2,
+                useGrouping: false
+              }),
+            endTime: (c.endTime/60).toLocaleString('en-US', {
+                minimumIntegerDigits: 2,
+                useGrouping: false
+              }) + ":" + (c.endTime%60).toLocaleString('en-US', {
+                minimumIntegerDigits: 2,
+                useGrouping: false
+              }),
             category: c.category,
             street: c.street,
             homeNumber: c.homeNumber,
