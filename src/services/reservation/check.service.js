@@ -6,7 +6,7 @@ const { reservationRepository, serviceRepository, companyRepository } = require(
 const { promisify } = require("util");
 
 module.exports.check = async(serviceId, date) => {
-    const reservations = await reservationRepository.list({ where: { service: serviceId, status: 'RESERVED' }, attributes: ['start'], raw: true})
+    const reservations = await reservationRepository.list({ where: { service: serviceId, date: date, status: 'RESERVED' }, attributes: ['start'], raw: true})
     const service = await serviceRepository.getById(serviceId)
     const company = await companyRepository.getById(service.company)
 
