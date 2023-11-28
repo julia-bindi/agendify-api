@@ -18,6 +18,8 @@ router.options("/services", cors(corsoptions), async (req,res) => { return res.s
 router.get("/services", cors(corsoptions), UserController.myServices)
 router.options("/reservations", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
 router.get("/reservations", cors(corsoptions), UserController.myReservations)
+router.options("/company/:email", cors(corsoptions), async (req,res) => { return res.status(StatusCodes.OK) })
+router.get("/company/:email", cors(corsoptions), UserController.companyServices)
 
 
 module.exports.user = router;
