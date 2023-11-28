@@ -26,6 +26,7 @@ module.exports.search = async(category = [], startTime = "00:00", endTime = "24:
         raw: true,
     })
 
+    console.log(companies)
     companies.rows.forEach(id => {
         ids.push(id.user)
     });
