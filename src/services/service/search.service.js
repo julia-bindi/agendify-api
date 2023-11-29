@@ -50,7 +50,7 @@ module.exports.search = async(category = [], startTime = "00:00", endTime = "24:
             email: userDict[c.user].email,
             imageName: userDict[c.user].imageName,
             imageType: userDict[c.user].imageType,
-            imageData: userDict[c.user].imageData,
+            imageData: userDict[c.user].imageData?.toString(),
             phone: userDict[c.user].phone,
             description: c.description,
             workDays: c.workDays,
