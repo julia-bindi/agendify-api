@@ -21,7 +21,7 @@ module.exports.login = async (email, passoword) => {
     if(!validation){
         throw{
             status: StatusCodes.UNAUTHORIZED,
-            message: messages.invalidPassword()
+            message: messages.invalidPassword
         }
     }
 
