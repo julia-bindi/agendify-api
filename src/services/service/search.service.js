@@ -61,7 +61,7 @@ module.exports.search = async(category = [], startTime = "00:00", endTime = "24:
                 minimumIntegerDigits: 2,
                 useGrouping: false
               }),
-            endTime: (c.endTime/60).toLocaleString('en-US', {
+            endTime: (Math.trunc(c.endTime/60)).toLocaleString('en-US', {
                 minimumIntegerDigits: 2,
                 useGrouping: false
               }) + ":" + (c.endTime%60).toLocaleString('en-US', {
